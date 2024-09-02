@@ -1,4 +1,18 @@
 {
   "name": "yarn-workspaces-example",
-  "packageManager": "yarn@4.4.1"
+  "version": "1.0.0",
+  "license": "MIT",
+  "packageManager": "yarn@4.4.1",
+  "workspaces": [
+    "apps/*",
+    "common/*"
+  ],
+  "scripts": {
+    "mobile:run-android": "yarn workspace mobile run android",
+    "mobile:run-ios": "yarn workspace mobile run ios",
+    "mobile:test": "yarn workspace mobile test",
+    "mobile:start": "yarn workspace mobile start --reset-cache",
+    "mobile:install-dependencies": "yarn workspace mobile install",
+    "mobile:install-pods": "yarn workspace mobile install-pods"
+  }
 }
